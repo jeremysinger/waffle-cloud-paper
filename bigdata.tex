@@ -4,17 +4,18 @@
 
 \documentclass[conference,10pt]{IEEEtran}
 
+
+\usepackage{hyperref}
+
 \begin{document}
-%
-% paper title
-% can use linebreaks \\ within to get better formatting as desired
-\title{Bare Demo of IEEEtran.cls for Conferences}
+
+\title{Economic Incentives for free market cloud computing}
 
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Jeremy Singer}
+\author{\IEEEauthorblockN{Jeremy Singer \and Abyd Adhami}
 \IEEEauthorblockA{School of Computing Science\\
 University of Glasgow\\
 UK\\
@@ -25,12 +26,76 @@ Email: jeremy.singer@glasgow.ac.uk}
 
 
 \begin{abstract}
-
-The abstract goes here.
+Although cloud computing has made great inroads in terms of consumer adoption, we argue that the paradigm still has a long way to go to reach an economically efficient free market state.
+We highlight three key problems with the current cloud computing approach. These are (1) coarse granularity of service provision, (2) inadequate support for small providers and prosumers, and (3) vendor lockin via APIs.
+In this position paper, we outline interesting lines of work that may lead to some solutions to these problems. The solutions are all based on our experiences with applying economic theory to computer systems.
 \end{abstract}
+
+%%%%%%%%%%%%
 
 \section{Introduction}
 
+Utility computing is now a well-established concept. Brief history of cloud.
+Current stats. Why is cloud computing so popular? NIST definition. Talk about capex being replaced by opex.
 
+However - not yet fully realised the power of this computing model - service provision/delivery. In this paper, we will outline three problems with cloud computing - preventing its full adoption - realising its potential - in a sustainable society.
+
+Argue that with increasing data (big data) on cloud provision - computer systems in general - makes the problems more acute.???
+
+%%%%%%%%%%
+
+\section{Paradigm Problems}
+
+%%%%%%
+
+\subsection{Coarse Granularity of Services}
+
+Quantised levels - e.g. Amazon, google - give examples. Rent machines by the hour - have particular service levels. Some more flexible services - e.g. AWS Lambda - but not yet common.
+
+Why is this bad? Inefficient in market. Also in analysis - prefer continuous variables? Bad for comparison - sometimes not possible to make direct comparisons between providers since they are offering different things.
+
+%%%%%%%
+
+\subsection{Exclusion of Small Providers}
+
+Currently the big four in cloud provision - Amazon, Microsoft, Google, IBM - responsible for over 50\% of the market - \footnote{\url{http://www.eweek.com/cloud/big-four-iaas-providers-now-own-half-the-market.html}}.
+
+In terms of infrastructural requirements - so much overhead - e.g. cost of building a datacenter - securing it - meeting ISO certified standards etc?
+
+No possibility of small providers entering this market. 
+
+Examples - Raspberry Pi cloud - others - micro datacenters.
+
+
+Also - prosumers - individuals contributing cycles - either for research (BOINC) or charitable ?? purposes. Grid computing. Also applicable to consumer clouds. Highlight parallels with electricity market - solar panels feeding back into grid. Similar with individuals with computers?
+
+No way to handle this / harness this at the moment?
+Require some kind of cloud brokerage service.
+
+%%%%%%%%
+
+\subsection{Incompatibility of Utilities}
+
+Each of the major cloud service providers has its own custom APIs and functionality for major features. Examples - data storage. Key/value stores - block storage, etc. Similarly, for emailing - etc. 
+Why? No cross-industry standards? 
+Basic vendor lockin. Ideally - want some kind of facade on top - some of these available but none widely adopted. Need something like POSIX compliance for Operating Systems - need a similar idea for cloud providers.
+So easy to migrate services dynamically, from one provider's cloud to another.
+
+%%%%%%%%%%%%%%%%
+
+\section{Research Directions}
+
+(abyd's text here)
+
+\section{Related Work}
+
+Look at Agoric systems - summarize this work.
+Look at Grid systems - highlight some survey articles here.
+Look at economics of cloud - some ideas here too.
+
+\section{Concluding Remarks}
+
+Early stages - cloud computing still developing. Long way to go.
+%%%
 
 \end{document}
