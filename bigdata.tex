@@ -48,23 +48,31 @@ Generally focus on infrastructure-as-a-service (IaaS) since this is where I have
 
 \section{Paradigm Problems}
 
+This section considers three issues with current cloud computing service provision.
+These issues prevent a free market economy from operating efficiently.
+
 %%%%%%
 
 \subsection{Coarse Granularity of Services}
 
-Quantised levels - e.g. Amazon, google - give examples. Rent machines by the hour - have particular service levels. Some more flexible services - e.g. AWS Lambda - but not yet commonplace.
+In terms of IaaS provision, most providers offer predefined, quantized units of computing resource. For example, the lowest specification of an Amazon Web Services instance is currently \emph{t2.micro} which features a single CPU and 1 GB RAM. Although the CPU bursting concept allows some rewards for unused CPU cycles, the rewards can only be claimed in terms of subsequent processing, rather than refunds or cheaper pricing.  
 
-Why is this bad? Inefficient in market. Also in analysis - prefer continuous variables? Bad for comparison - sometimes not possible to make direct comparisons between providers since they are offering different things.
+Another quantized unit is the minimum time period for which instances can be commissioned. AWS customers must rent machines by the hour. Google Compute Engine customers are charged for at least 10 minutes.
+Although there are some more flexible services, e.g.\ the asynchronous event-based AWS Lambda platform, such innovations are not as flexible and are not yet commonplace.
+
+This quantization of service is inefficient, in terms of market economics. Very often, consumers will pay for more provision than they actually require. Another disadvantage is that any kind of statistical analysis, modeling or forecasting for computing requirements would be more straightforward with continuous parameters. 
+
+Finally, the different instance types hinder fair comparison. Often, it is not possible to make direct comparisons between different IaaS providers since they are offering products that are not precisely equivalent.
 
 %%%%%%%
 
 \subsection{Exclusion of Small Providers}
 
-Currently the big four in cloud provision - Amazon, Microsoft, Google, IBM - responsible for over 50\% of the market - \footnote{\url{http://www.eweek.com/cloud/big-four-iaas-providers-now-own-half-the-market.html}}.
+According to a recent industrial survey, the \emph{big four} providers of compute infrastructure, (Amazon, Microsoft, Google, IBM) control over 50\% of the cloud market \footnote{\url{http://www.eweek.com/cloud/big-four-iaas-providers-now-own-half-the-market.html}}.
 
-In terms of infrastructural requirements - so much overhead - e.g. cost of building a datacenter - securing it - meeting ISO certified standards etc?
+In terms of physical requirements, there is a great deal of overhead in building and maintaining a datacenter. Significant costs include electricity. Unexpected costs include compliance with ISO certification standards for cloud security.
 
-No possibility of small providers entering this market. 
+These significant barriers to entry prevent small providers from participating in the cloud service provision market. 
 
 Examples - Raspberry Pi cloud - others - micro datacenters.
 
