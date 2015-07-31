@@ -86,10 +86,11 @@ Give some examples- e.g. cloudaroo, rightscale.
 
 \subsection{Incompatibility of Platform Utilities}
 
-Each of the major cloud service providers has its own custom APIs and functionality for major features. Examples - data storage. Key/value stores - block storage, etc. Similarly, for emailing - etc. 
-Why? No cross-industry standards? 
-Basic vendor lockin. Ideally - want some kind of facade on top - some of these available but none widely adopted. Need something like POSIX compliance for Operating Systems - need a similar idea for cloud providers.
-So easy to migrate services dynamically, from one provider's cloud to another.
+Each of the major cloud service providers presents its own custom APIs and functionality for major application-level support. Typical features include key/value storage, database and outgoing email.
+There are few cloud industry standards, so all vendors offer their own, mutually incompatible, APIs.
+This problematic scenario quickly leads to vendor lockin for cloud users. Any kind of software investment built on a commercial IaaS platform will have vendor-specific assumptions and dependences. 
+Ideally, a vendor-neutral cloud facade would address this difficulty. Although some facade style solutions are available, none is widely adopted by customers or supported by all cloud providers.
+In the same way as operating systems have the concept of POSIX compliance, we need something similar for IaaS providers. This would make it easy to migrate services dynamically from one provider to another, based on fluctuating demand, prices and other higher level non-functional concerns.
 
 might argue that we stick with lowest common denominator - e.g. an x86 Linux server and build all services on top - e..g database etc. BUT having to administer all these services oneself is a big overhead - lose many of the benefits of utility computing in the first place (one of which is minimal setup and configuration).
 
