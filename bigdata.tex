@@ -62,7 +62,7 @@ In terms of IaaS provision, most providers offer predefined, quantized units of 
 Another quantized unit is the minimum time period for which instances can be commissioned. AWS customers must rent machines by the hour. Google Compute Engine customers are charged for at least 10 minutes.
 Although there are some more light-weight services, e.g.\ the asynchronous event-based AWS Lambda platform, such innovations are not as flexible and are not yet commonplace.
 
-This quantization of service is inefficient, in terms of market economics. Very often, consumers will pay for more provision than they actually require. Another disadvantage is that any kind of statistical analysis, modeling or forecasting for computing requirements would be more straightforward with continuous parameters. 
+This quantization of service is inefficient, in terms of market economics. Very often, consumers will pay for more provision than they actually require. Another disadvantage is that any kind of statistical analysis, modeling or forecasting for computing requirements is less straightforward with non-continuous parameters. 
 
 Finally, the different instance types hinder fair comparison. Often, it is not possible to make direct comparisons between different IaaS providers since they are offering products that are not precisely equivalent.
 
@@ -72,17 +72,16 @@ Finally, the different instance types hinder fair comparison. Often, it is not p
 
 According to a recent industrial survey, the \emph{big four} providers of compute infrastructure, (Amazon, Microsoft, Google, IBM) control over 50\% of the cloud market \footnote{\url{http://www.eweek.com/cloud/big-four-iaas-providers-now-own-half-the-market.html}}.
 
-In terms of physical requirements, there is a great deal of overhead in building and maintaining a datacenter. Significant costs include electricity. Unexpected costs include compliance with ISO certification standards for cloud security. (Cite ``The Cost of a Cloud'' Microsoft research)
+In terms of physical requirements, there is a great deal of overhead in building and maintaining a datacenter \cite{greenberg08cost}. Significant costs include electricity. Unexpected costs include compliance with ISO certification standards for cloud security.
 
 These significant barriers to entry prevent small providers from participating in the cloud service provision market. Meaningful innovation is occuring in the micro datacenter field, e.g.\ Raspberry Pi cloud and others.
 However it is unlikely that such new technology will be adopted by the market in general.
 
 
-A further feature of a free market is the existence of \emph{prosumers}. These are individual who buy and sell in the market. In terms of cloud computing, these are end-users who contribute compute cycles. There is a precedent for this, either in terms of research projects (BOINC) or other charitable purposes (check). Generally, volunteer computing is more closely associated with \emph{grid} rather than cloud technologies. However it may also be applicable to consumer clouds. There are clear parallels with the electricity utility market. Electricity prosumers may have solar panel installations that feed energy back into the grid. In terms of cloud computing, there is no practicable technique to harness this prosumer behaviour at present.
+A further feature of a free market is the existence of \emph{prosumers}. These are individual who, at different times,  buy (i.e.\ they are consumers) and sell (i.e.\ they are producers) in the market. In terms of cloud computing, these are end-users who contribute compute cycles. There is a precedent for this, either in terms of research projects (BOINC) or other charitable purposes (check). Generally, volunteer computing is more closely associated with \emph{grid} rather than \emph{cloud} technologies. However it may also be applicable to consumer clouds. There are clear parallels with the electricity utility market. Electricity prosumers may have solar panel installations that feed energy back into the grid. In terms of cloud computing, there is no practicable technique to harness this massively distributed small-scale prosumer behaviour at present.
 
-In the long term, the entry of small providers and prosumers to the market will require some kind of arbitration or cloud brokerage service. While brokerages exist currently, they are limited to major service providers and do not 
-???
-Give some examples- e.g. cloudaroo, rightscale.
+In the long term, the entry of small providers and prosumers to the market will require some kind of arbitration or cloud brokerage service. While brokerages exist currently (e.g.\ Cloudaroo, RightScale) they are entirely focused on major service providers and do not support prosumers in any way.
+Grid broker services \footnote{\url{http://www.cloudbus.org/broker/}} for eScience applications are much more flexible and feature discovery-based protocols for service provision. 
 
 %%%%%%%%
 
@@ -102,7 +101,22 @@ This means the cloud customer actually \emph{loses} many of the benefits of util
 
 \section{Research Directions}
 
-(abyd's text here)
+As cloud computing continues to develop and gain significance, the financial and marketing aspects become ever more important.
+At present, a handful of large service providers (i.e.\ Amazon, Microsoft, Google and IBM) hold a significant share of the market, each with their own set of branded products and proprietary ecosystem. We argue that there is greater potential benefit in opening up this marketplace.
+
+By treating IaaS cloud as a \emph{commodity} and potentially representing it by financial instruments, it can be traded on an exchange in similar ways to how oil is traded presently. The rationale here is that storage or computing resources are generic and hence organisations can exchange or trade these, competing on price or like-for-like services on a trading platform. This will help create more fluid supply and demand dynamics in the market and bring more competition in this space.
+
+There are variations of how cloud services are priced of course, and whilst there are several commercial cloud marketplaces, e.g Spot Instances and Reserved Instance Marketplace by Amazon AWS and SpotCloud by Virtustream (now part of EMC), they are affiliated and specific to each vendor respectively. 
+This has led to some organisations moving into this space and creating an active exchange market for cloud services. One such exchange for computing capacity is the Cloud Exchange AG \footnote{\url{http://cloud.exchange}} recently launched through a joint venture between Deutsche Borse and Zimory.  This aims to standardise the way cloud services are offered and measured on the market. It does this by enabling multiple cloud providers to offer comparable services on a single platform with the ability to select the cloud servers' location and jurisdiction.
+
+Thoughts:
+
+One of the main challenges with trading cloud easily as a commodity on a trading platform is the lack of standardisation in industry (i.e. apples to apples). Cloud providers each have different ways in processing workloads and apply different pricing structures. The objective would be to be able to trade IT in similar fashion as Energy or Oil, but this is a challenge at the moment due to low levels of standardisation. Cloud Exchange [1] is a step in the right direction, however further is required to truly reach this goal.
+
+Use of dynamic scaling and allocations [4] of cloud infrastructure, together with some sort of smart system that decides where to purchase the extra capacity necessary and then in turn deploy and spin up the additional instances in the purchased pay-as-you-go cloud space. 
+
+Could progress towards a trading platform which allows anyone to setup and start selling cloud; also a rating system or index which would calculate a value/rating for reliability and performance against each cloud provider.
+
 
 \section{Related Work}
 
@@ -113,6 +127,11 @@ Look at economics of cloud - some ideas here too.
 \section{Concluding Remarks}
 
 Early stages - cloud computing still developing. Long way to go.
+%%%
+
+\bibliographystyle{IEEEtran}
+\bibliography{bigdata}
+
 %%%
 
 \end{document}
