@@ -35,21 +35,23 @@ In this position paper, we outline interesting lines of work that may lead to so
 
 \section{Introduction}
 
-Utility computing is now a well-established concept. Brief history of cloud.
+Big data and ubiquitous computing systems are built upon the foundation of cloud computing, which is now a well-established concept. Industry investment in cloud is worth tens of billions of dollars per annum \footnote{
+\url{http://www.v3.co.uk/v3-uk/news/2405174/cloud-computing-spending-to-hit-usd32bn-in-2015}} \footnote{\url{https://www.idc.com/getdoc.jsp?containerId=prUS25797415}}. 
+A recent enterprise survey shows that 68\% of companies currently host less than 20\% of their application portfolios in the cloud, so there is still massive scope for increased cloud adoption.
 Current stats. Why is cloud computing so popular? NIST definition. Talk about capex being replaced by opex.
 
-However - not yet fully realised the power of this computing model - service provision/delivery. In this paper, we will outline three problems with cloud computing - preventing its full adoption - realising its potential - in a sustainable society.
-
-Argue that with increasing data (big data) on cloud provision - computer systems in general - makes the problems more acute.??? Harness big data - to make a free market for all. 
-
-Generally focus on infrastructure-as-a-service (IaaS) since this is where I have most experience. Same arguments will apply to other levels of cloud service provision.
+In this paper, we argue that the computing industry has not yet realised the full potential of the cloud computing model for service provision and delivery. In this paper, we outline three problems with cloud computing that prevent its full adoption in a sustainable society driven by big data.
+Ideally, a free market for cloud is the desirable scenario. However the problems shown in Section \ref{sec-probs}
+are impediments to a free market.
+We generally focus on infrastructure-as-a-service (IaaS) cloud computing since this is where we have most experience. However we expect that similar arguments will apply to other levels of utility computing provision.
 
 %%%%%%%%%%
 
 \section{Paradigm Problems}
+\label{sec-probs}
 
 This section considers three issues with current cloud computing service provision.
-These issues prevent a free market economy from operating efficiently.
+We argue that these and similar issues are preventing the establishment anda free market economy from operating efficiently.
 
 %%%%%%
 
@@ -92,7 +94,9 @@ This problematic scenario quickly leads to vendor lockin for cloud users. Any ki
 Ideally, a vendor-neutral cloud facade would address this difficulty. Although some facade style solutions are available, none is widely adopted by customers or supported by all cloud providers.
 In the same way as operating systems have the concept of POSIX compliance, we need something similar for IaaS providers. This would make it easy to migrate services dynamically from one provider to another, based on fluctuating demand, prices and other higher level non-functional concerns.
 
-might argue that we stick with lowest common denominator - e.g. an x86 Linux server and build all services on top - e..g database etc. BUT having to administer all these services oneself is a big overhead - lose many of the benefits of utility computing in the first place (one of which is minimal setup and configuration).
+One might argue that the lowest common denominator across all IaaS providers, e.g.\ a bare-bones x86 Linux server, might be the common facade. Then cloud customers can build specific services on top of this standard base layer, e.g.\ database, key/value store, etc. Such services could be deployed in Docker containers, which are increasingly supported by major vendors. However, the administration overhead for all these services has a high cost.
+This means the cloud customer actually \emph{loses} many of the benefits of utility computing in the first place
+(i.e.\ minimal setup and configuration).
 
 %%%%%%%%%%%%%%%%
 
