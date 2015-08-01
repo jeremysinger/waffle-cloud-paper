@@ -34,6 +34,7 @@ In this position paper, we outline interesting lines of work that may lead to so
 %%%%%%%%%%%%
 
 \section{Introduction}
+\label{sec-intro}
 
 Big data and ubiquitous computing systems are built upon the foundation of cloud computing, which is now a well-established concept. Industry investment in cloud is worth tens of billions of dollars per annum \footnote{
 \url{http://www.v3.co.uk/v3-uk/news/2405174/cloud-computing-spending-to-hit-usd32bn-in-2015}} \footnote{\url{https://www.idc.com/getdoc.jsp?containerId=prUS25797415}}. 
@@ -100,18 +101,18 @@ This means the cloud customer actually \emph{loses} many of the benefits of util
 %%%%%%%%%%%%%%%%
 
 \section{Research Directions}
+\label{sec-directions}
 
 As cloud computing continues to develop and gain significance, the financial and marketing aspects become ever more important.
-At present, a handful of large service providers (i.e.\ Amazon, Microsoft, Google and IBM) hold a significant share of the market, each with their own set of branded products and proprietary ecosystem. We argue that there is greater potential benefit in opening up this marketplace.
+At present, a handful of large service providers (i.e.\ Amazon, Microsoft, Google and IBM) hold a majority share of the market, each with their own set of branded products and proprietary ecosystem. We argue that there is greater potential benefit in opening up this marketplace.
 
 By treating IaaS cloud as a \emph{commodity} and potentially representing it by financial instruments, it can be traded on an exchange in similar ways to how oil is traded presently. The rationale here is that storage or computing resources are generic and hence organisations can exchange or trade these, competing on price or like-for-like services on a trading platform. This will help create more fluid supply and demand dynamics in the market and bring more competition in this space.
 
 There are variations of how cloud services are priced of course, and whilst there are several commercial cloud marketplaces, e.g Spot Instances and Reserved Instance Marketplace by Amazon AWS and SpotCloud by Virtustream (now part of EMC), they are affiliated and specific to each vendor respectively. 
 This has led to some organisations moving into this space and creating an active exchange market for cloud services. One such exchange for computing capacity is the Cloud Exchange AG \footnote{\url{http://cloud.exchange}} recently launched through a joint venture between Deutsche Borse and Zimory.  This aims to standardise the way cloud services are offered and measured on the market. It does this by enabling multiple cloud providers to offer comparable services on a single platform with the ability to select the cloud servers' location and jurisdiction.
 
-Thoughts:
-
-One of the main challenges with trading cloud easily as a commodity on a trading platform is the lack of standardisation in industry (i.e. apples to apples). Cloud providers each have different ways in processing workloads and apply different pricing structures. The objective would be to be able to trade IT in similar fashion as Energy or Oil, but this is a challenge at the moment due to low levels of standardisation. Cloud Exchange [1] is a step in the right direction, however further is required to truly reach this goal.
+One of the main challenges in trading utility computing resource like a commodity on a trading platform is the lack of industry standardisation, as discussed in Section \ref{sec-probs}.
+XXX in industry (i.e. apples to apples). Cloud providers each have different ways in processing workloads and apply different pricing structures. The objective would be to be able to trade IT in similar fashion as Energy or Oil, but this is a challenge at the moment due to low levels of standardisation. Cloud Exchange [1] is a step in the right direction, however further is required to truly reach this goal.
 
 Use of dynamic scaling and allocations [4] of cloud infrastructure, together with some sort of smart system that decides where to purchase the extra capacity necessary and then in turn deploy and spin up the additional instances in the purchased pay-as-you-go cloud space. 
 
@@ -119,12 +120,14 @@ Could progress towards a trading platform which allows anyone to setup and start
 
 
 \section{Related Work}
+\label{sec-relw}
 
 Look at Agoric systems - summarize this work.
 Look at Grid systems - highlight some survey articles here.
 Look at economics of cloud - some ideas here too.
 
 \section{Concluding Remarks}
+\label{sec-concl}
 
 Early stages - cloud computing still developing. Long way to go.
 %%%
