@@ -9,7 +9,7 @@
 
 \begin{document}
 
-\title{Economic Incentives for free market cloud computing}
+\title{Towards free market cloud computing}
 
 
 % author names and affiliations
@@ -113,7 +113,7 @@ This has led to some organisations moving into this space and creating an active
 
 One of the main challenges in trading utility computing resource like a commodity on a trading platform is the lack of industry standardisation, as discussed in Section \ref{sec-probs}.
 IaaS providers each have different ways of processing workloads and apply different pricing structures. Our ultimate objective would be to be able to trade compute resource in similar fashion as energy or oil, which is clearly equivalent from different suppliers.
-Cloud Exchange (ref) is a small step in the right direction, however further work is required to reach this goal. One possibility is that national governments or international organizations may seek to regulate the utility computing market, similarly to the energy market---to provide a competitive market by legal means.
+Cloud Exchange (ref) is a small step in the right direction, however further work is required to reach this goal. One possibility is that national governments or international organizations may seek to regulate the utility computing market, similarly to the energy market---to provide a competitive market by legal means. The European Union ruling against Microsoft in 2004 is an analogous case.
 
 
 The immediate aim, from a systems deployment perspective, is to enable
@@ -127,9 +127,20 @@ a trading platform which allows anyone to setup and start selling cloud resource
 \section{Related Work}
 \label{sec-relw}
 
-Look at Agoric systems - summarize this work.
-Look at Grid systems - highlight some survey articles here.
-Look at economics of cloud - some ideas here too.
+Early research on \emph{agoric systems} argues that decentralized market mechanisms are an effective way to manage resources efficiently in large, complex distributed computing environments. An agoric system provides means to share knowledge and coordinate action efficiently. Both of these concepts are required for utility computing.
+(cite)
+
+In the original presentation of agoric systems, the authors focus on specialized distributed computation activities, such as garbage collection across trust boundaries (cite). We have also developed simple economic models for memory management in virtual machines (cites).  However broadly similar principles should be applicable to the more general resource management issues in IaaS cloud provision.
+
+
+Many of the concepts and technologies that underlie cloud computing have their origins in grid computing.
+Cloud may be seen as the logical convergence of grid and peer-to-peer distributed computing \cite{foster03death}.
+Resource management is a key component in grids---Krauter et al.\ present a good taxonomic overview \cite{krauter02taxonomy}. In their taxonomy, some grid resource management systems feature decentralized scheduling with predictive state estimation based on economic pricing models. This is the style of computational resource market we anticipate as being most useful for cloud.
+Buyya \cite{buyya02economic} presents a distributed computational economy for resource trading in grid systems, based on quality-of-service metrics.
+
+Pal and Hui \cite{pal13economic} construct a formal model based on queueing theory to describe a multi-provider cloud market for a single application type. They present an analysis of game theoretic models to show the existence of Nash equilibria, which can drive dynamic optimal resource allocation.
+We argue that this kind of model is essential, although we would broaden the market to multiple application types.
+
 
 \section{Concluding Remarks}
 \label{sec-concl}
