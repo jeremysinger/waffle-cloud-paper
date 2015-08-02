@@ -52,13 +52,14 @@ We generally focus on infrastructure-as-a-service (IaaS) cloud computing since t
 \label{sec-probs}
 
 This section considers three issues with current cloud computing service provision.
-We argue that these and similar issues are preventing the establishment anda free market economy from operating efficiently.
+We argue that these and similar issues are preventing the establishment and efficient operation of a free market economy.
+
 
 %%%%%%
 
 \subsection{Coarse Granularity of Services}
 
-In terms of IaaS provision, most providers offer predefined, quantized units of computing resource. For example, the lowest specification of an Amazon Web Services instance is currently \emph{t2.micro} which features a single CPU and 1 GB RAM. Although the CPU bursting concept allows some rewards for unused CPU cycles, the rewards can only be claimed in terms of subsequent processing, rather than refunds or cheaper pricing.  
+In terms of IaaS provision, most providers offer predefined, quantized units of computing resource. For example, the lowest specification of an Amazon Web Services (AWS) instance is currently \emph{t2.micro} which features a single CPU and 1 GB RAM. Although the CPU bursting concept allows some rewards for unused CPU cycles, the rewards can only be claimed in terms of subsequent processing, rather than refunds or cheaper pricing.  
 
 Another quantized unit is the minimum time period for which instances can be commissioned. AWS customers must rent machines by the hour. Google Compute Engine customers are charged for at least 10 minutes.
 Although there are some more light-weight services, e.g.\ the asynchronous event-based AWS Lambda platform, such innovations are not as flexible and are not yet commonplace.
@@ -109,11 +110,11 @@ At present, a handful of large service providers (i.e.\ Amazon, Microsoft, Googl
 By treating IaaS cloud as a \emph{commodity} and potentially representing it by financial instruments, it can be traded on an exchange in similar ways to how oil is traded presently. The rationale here is that storage or computing resources are generic and hence organisations can exchange or trade these, competing on price or like-for-like services on a trading platform. This will help create more fluid supply and demand dynamics in the market and bring more competition in this space.
 
 There are variations of how cloud services are priced of course, and whilst there are several commercial cloud marketplaces, e.g Spot Instances and Reserved Instance Marketplace by Amazon AWS and SpotCloud by Virtustream (now part of EMC), they are affiliated and specific to each vendor respectively. 
-This has led to some organisations moving into this space and creating an active exchange market for cloud services. One such exchange for computing capacity is the Cloud Exchange AG \footnote{\url{http://cloud.exchange}} recently launched through a joint venture between Deutsche Borse and Zimory.  This aims to standardise the way cloud services are offered and measured on the market. It does this by enabling multiple cloud providers to offer comparable services on a single platform with the ability to select the cloud servers' location and jurisdiction.
+This has led to some organisations moving into this space and creating an active exchange market for cloud services. One such exchange for computing capacity is the Cloud Exchange AG \footnote{\url{http://cloud.exchange}} recently launched through a joint venture between Deutsche B\"{o}rse and Zimory.  This aims to standardise the way cloud services are offered and measured on the market. It does this by enabling multiple cloud providers to offer comparable services on a single platform with the ability to select the cloud servers' location and jurisdiction.
 
 One of the main challenges in trading utility computing resource like a commodity on a trading platform is the lack of industry standardisation, as discussed in Section \ref{sec-probs}.
 IaaS providers each have different ways of processing workloads and apply different pricing structures. Our ultimate objective would be to be able to trade compute resource in similar fashion as energy or oil, which is clearly equivalent from different suppliers.
-Cloud Exchange (ref) is a small step in the right direction, however further work is required to reach this goal. One possibility is that national governments or international organizations may seek to regulate the utility computing market, similarly to the energy market---to provide a competitive market by legal means. The European Union ruling against Microsoft in 2004 is an analogous case.
+The B\"{o}rse Cloud Exchange is a small step in the right direction, however further work is required to reach this goal. One possibility is that national governments or international organizations may seek to regulate the utility computing market, similarly to the energy market---to provide a competitive market by legal means. The European Union ruling against Microsoft in 2004 is an analogous case.
 
 
 The immediate aim, from a systems deployment perspective, is to enable
@@ -129,7 +130,7 @@ a trading platform which allows anyone to setup and start selling cloud resource
 
 Early research on \emph{agoric systems}  \cite{miller88markets} argues that decentralized market mechanisms are an effective way to manage resources efficiently in large, complex distributed computing environments. An agoric system provides means to share knowledge and coordinate action efficiently. Both of these concepts are required for effective utility computing.
 
-In the original presentation of agoric systems, the authors focus on specialized distributed computation activities, such as garbage collection across trust boundaries \cite{miller88incentive}. We have also developed simple economic models for memory management in virtual machines \cite{singer10economics,cameron15forseti}.  However broadly similar principles should be applicable to the more general resource management issues in IaaS cloud provision.
+In the original presentation of agoric systems, the authors focus on specialized distributed computation activities, such as garbage collection across trust boundaries \cite{miller88incentive}. We have also developed simple economic models for memory management in virtual machines \cite{singer10economics,cameron15judgment}.  However broadly similar principles should be applicable to the more general resource management issues in IaaS cloud provision.
 
 
 Many of the concepts and technologies that underlie cloud computing have their origins in grid computing.
