@@ -15,11 +15,11 @@
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Jeremy Singer, Abyd Adhami}
+\author{\IEEEauthorblockN{Jeremy Singer, Abyd Adhami, Colin Perkins}
 \IEEEauthorblockA{School of Computing Science\\
 University of Glasgow\\
 UK\\
-Email: jeremy.singer@glasgow.ac.uk, abyd@adhami.co.uk}
+Email: jeremy.singer@glasgow.ac.uk, abyd@adhami.co.uk, colin.perkins@glasgow.ac.uk}
 }
 
 \maketitle
@@ -42,17 +42,25 @@ A recent enterprise survey \cite{rightscale} shows that 68\% of companies curren
 %Current stats. Why is cloud computing so popular? NIST definition. %Talk about capex being replaced by opex.
 
 In this paper, we argue that the computing industry has not yet realised the full potential of the cloud computing model for service provision and delivery. We outline three problems with cloud computing that prevent its full adoption in a sustainable society driven by big data.
-Ideally, a free market for cloud is the desirable scenario. However the problems shown in Section \ref{sec-probs}
-are impediments to a free market.
-We generally focus on infrastructure-as-a-service (IaaS) cloud computing since this is where we have most experience. However we expect that similar arguments will apply to other levels of utility computing provision.
+Ideally, a free market for cloud is the desirable scenario. However the problems outlined in Section \ref{sec-probs}
+are impediments to a free market. Briefly, these are:
+\begin{enumerate}
+\item service granularity is insufficiently fine-grained.
+\item micro-cloud providers are unable to enter the market.
+\item the range of cloud platforms is heterogeneous and broadly incompatible.
+\end{enumerate}
+
+We generally focus on infrastructure-as-a-service (IaaS) cloud computing since this is where we have most experience. Nonetheless we expect that similar arguments will apply to other levels of utility computing provision.
+%
+In Section \ref{sec-directions} we sketch out some directions for future research in this area.
 
 %%%%%%%%%%
 
 \section{Paradigm Problems}
 \label{sec-probs}
 
-This section considers three issues with current cloud computing service provision.
-We argue that these and similar issues are preventing the establishment and efficient operation of a free market economy.
+This section considers three issues with current cloud computing provision.
+We argue that these and similar problems are preventing the establishment and efficient operation of a free market economy for cloud services.
 
 
 %%%%%%
@@ -74,13 +82,13 @@ Finally, the different instance types hinder fair comparison. Often, it is not p
 
 According to a recent industrial survey, the \emph{big four} providers of compute infrastructure, (Amazon, Microsoft, Google, IBM) control over 50\% of the cloud market \footnote{\url{http://www.eweek.com/cloud/big-four-iaas-providers-now-own-half-the-market.html}}.
 
-In terms of physical requirements, there is a great deal of overhead in building and maintaining a datacenter \cite{greenberg08cost}. Significant costs include electricity. Unexpected costs include compliance with ISO certification standards for cloud security.
+In terms of physical requirements, there is a great deal of overhead in building and maintaining a datacenter \cite{greenberg08cost}. Significant costs include electricity. Potentially unexpected costs include compliance with ISO certification standards for cloud security.
 
 These significant barriers to entry prevent small providers from participating in the cloud service provision market. Meaningful innovation is occuring in the micro datacenter field, e.g.\ Raspberry Pi clusters \cite{cox14low} and clouds \cite{tso13glasgow}.
-However it is unlikely that such new technology will be adopted by the market in general.
+However it is unlikely that such new technology will be adopted by the market as it presently stands.
 
 
-A further feature of a free market is the existence of \emph{prosumers}. These are individual who, at different times,  buy (i.e.\ they are consumers) and sell (i.e.\ they are producers) in the market. In terms of cloud computing, these are end-users who contribute compute cycles. There is a precedent for this in terms of distributed research projects like BOINC \cite{anderson04boinc}.
+A further feature of a free market is the existence of \emph{prosumers}. These are individual who, at different times,  buy (i.e.\ they are consumers) and sell (i.e.\ they are producers) in the market. In terms of cloud computing, these prosumers are end-users who contribute compute cycles. There is a precedent for this in terms of distributed research projects like BOINC \cite{anderson04boinc}.
 Generally, volunteer computing is more closely associated with \emph{grid} rather than \emph{cloud} technologies. However it may also be applicable to consumer clouds, given the scope of available resource \cite{anderson06computational}. There are clear parallels with the electricity utility market. Electricity prosumers may have solar panel installations that feed energy back into the grid. In terms of cloud computing, there is no practicable technique to harness this massively distributed small-scale prosumer behaviour at present.
 
 In the long term, the entry of small providers and prosumers to the market will require some kind of arbitration or cloud brokerage service. While brokerages exist currently (e.g.\ Cloudaroo, RightScale) they are entirely focused on major service providers and do not support prosumers in any way.
