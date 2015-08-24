@@ -78,6 +78,34 @@ Finally, the different instance types hinder fair comparison. Often, it is not p
 
 %%%%%%%
 
+\subsection{Limited Provision and Control of Resources}
+
+In addition to limited granularity of resources, providers generally offer
+only a limited set of resources that can be provisioned and controlled. 
+Compute resources and memory can easily be provisioned, and some platforms
+offer the ability to provision GPU or storage resources, but options to
+provision the network access tend to be severely limited. That is, cloud
+providers tend to virtualise compute, memory, and storage resources, but
+offer no real access to virtualised network services. 
+
+This makes it difficult, for example, to run applications that are
+sensitive to network latency and/or jitter in cloud environments, since
+there is generally no way to request quality of service measures be
+employed. 
+
+Similarly, despite massive investment and research into improving data
+centre network protocols, and provision of software defined networking
+infrastructure to ease management and improve control over resources, 
+it is not generally possible for clients of a cloud computing service
+to access these new features. Protocol changes and virtualised SDN 
+resources are limited to cloud providers, and not made available to
+customers. We need visibility into the software-defined network, to
+allow configuration of network services, and to enable a market for
+network service differentiation and network function virtualisation
+in the cloud. 
+
+%%%%%%%
+
 \subsection{Exclusion of Small Providers}
 
 According to a recent industrial survey \cite{url3} the \emph{big four} providers of compute infrastructure, (Amazon, Microsoft, Google, IBM) control over 50\% of the cloud market. 
