@@ -36,8 +36,8 @@ In this position paper, we briefly outline interesting work that may lead to a s
 \section{Introduction}
 \label{sec-intro}
 
-Big data and ubiquitous computing systems are built upon the foundation of cloud computing, which is now a well-established concept \cite{armbrust2010view}. Industry investment in cloud is worth tens of billions of dollars per annum \footnote{
-\url{http://www.v3.co.uk/v3-uk/news/2405174/cloud-computing-spending-to-hit-usd32bn-in-2015}} \footnote{\url{https://www.idc.com/getdoc.jsp?containerId=prUS25797415}}. 
+Big data and ubiquitous computing systems are built upon the foundation of cloud computing, which is now a well-established concept \cite{armbrust2010view}. Industry investment in cloud is worth tens of billions of dollars per annum 
+\cite{url1,url2}.
 A recent enterprise survey \cite{rightscale} shows that 68\% of companies currently host less than 20\% of their application portfolios in the cloud, so there is still massive scope for increased cloud adoption.
 %Current stats. Why is cloud computing so popular? NIST definition. %Talk about capex being replaced by opex.
 
@@ -80,7 +80,7 @@ Finally, the different instance types hinder fair comparison. Often, it is not p
 
 \subsection{Exclusion of Small Providers}
 
-According to a recent industrial survey, the \emph{big four} providers of compute infrastructure, (Amazon, Microsoft, Google, IBM) control over 50\% of the cloud market \footnote{\url{http://www.eweek.com/cloud/big-four-iaas-providers-now-own-half-the-market.html}}.
+According to a recent industrial survey \cite{url3} the \emph{big four} providers of compute infrastructure, (Amazon, Microsoft, Google, IBM) control over 50\% of the cloud market. 
 
 In terms of physical requirements, there is a great deal of overhead in building and maintaining a datacenter \cite{greenberg08cost}. Significant costs include electricity. Potentially unexpected costs include compliance with ISO certification standards for cloud security.
 
@@ -92,7 +92,7 @@ A further feature of a free market is the existence of \emph{prosumers}. These a
 Generally, volunteer computing is more closely associated with \emph{grid} rather than \emph{cloud} technologies. However it may also be applicable to consumer clouds, given the scope of available resource \cite{anderson06computational}. There are clear parallels with the electricity utility market. Electricity prosumers may have solar panel installations that feed energy back into the grid. In terms of cloud computing, there is no practicable technique to harness this massively distributed small-scale prosumer behaviour at present.
 
 In the long term, the entry of small providers and prosumers to the market will require some kind of arbitration or cloud brokerage service. While brokerages exist currently (e.g.\ Cloudaroo, RightScale) they are entirely focused on major service providers and do not support prosumers in any way.
-Grid broker services \footnote{\url{http://www.cloudbus.org/broker/}} for eScience applications are much more flexible and feature discovery-based protocols for service provision. 
+Grid broker services \cite{url4} for eScience applications are much more flexible and feature discovery-based protocols for service provision. 
 
 %%%%%%%%
 
@@ -101,7 +101,7 @@ Grid broker services \footnote{\url{http://www.cloudbus.org/broker/}} for eScien
 Each of the major cloud service providers presents its own custom APIs and functionality for major application-level support. Typical features include key/value storage, database and outgoing email.
 There are few cloud industry standards, so all vendors offer their own, mutually incompatible, APIs.
 This problematic scenario quickly leads to vendor lockin for cloud users. Any kind of software investment built on a commercial IaaS platform will have vendor-specific assumptions and dependences. 
-Ideally, a vendor-neutral cloud facade \cite{martino15cross} would address this difficulty. Although some facade style solutions are available (e.g.\ Apache libcloud\footnote{\url{https://libcloud.apache.org}} or DeltaCloud \footnote{\url{http://deltacloud.apache.org}}) none is widely adopted by customers or supported by all cloud providers.
+Ideally, a vendor-neutral cloud facade \cite{martino15cross} would address this difficulty. Although some facade style solutions are available (e.g.\ Apache libcloud \cite{url5} or DeltaCloud \cite{url6}) none is widely adopted by customers or supported by all cloud providers.
 In the same way as operating systems have the concept of POSIX compliance, we need something similar for IaaS providers. This would make it easy to migrate services dynamically from one provider to another, based on fluctuating demand, prices and other higher level non-functional concerns.
 
 One might argue that the lowest common denominator across all IaaS providers, e.g.\ a bare-bones x86 Linux server, might be the common facade. Then cloud customers can build specific services on top of this standard base layer, e.g.\ database, key/value store, etc. Such services could be deployed in Docker containers, which are increasingly supported by major vendors. However, the administration overhead for all these services has a high cost.
@@ -119,7 +119,7 @@ At present, a handful of large service providers (i.e.\ Amazon, Microsoft, Googl
 By treating IaaS cloud as a \emph{commodity} and potentially representing it by financial instruments, it can be traded on an exchange in similar ways to how oil is traded presently. The rationale here is that storage or computing resources are generic and hence organisations can exchange or trade these, competing on price or like-for-like services on a trading platform. This will help create more fluid supply and demand dynamics in the market and bring more competition in this space. Sharma et al.\ \cite{sharma12pricing} present an initial formulation and simulation of this concept.
 
 There are variations of how cloud services are priced of course, and whilst there are several commercial cloud marketplaces, e.g Spot Instances and Reserved Instance Marketplace by Amazon AWS and SpotCloud by Virtustream (now part of EMC), they are affiliated and specific to each vendor respectively. 
-This has led to some organisations moving into this space and creating an active exchange market for cloud services. One such exchange for computing capacity is the Cloud Exchange AG \footnote{\url{http://cloud.exchange}} recently launched through a joint venture between Deutsche B\"{o}rse and Zimory.  This aims to standardise the way cloud services are offered and measured on the market. It does this by enabling multiple cloud providers to offer comparable services on a single platform with the ability to select the cloud servers' location and jurisdiction.
+This has led to some organisations moving into this space and creating an active exchange market for cloud services. One such exchange for computing capacity is the Cloud Exchange AG \cite{url7} recently launched through a joint venture between Deutsche B\"{o}rse and Zimory.  This aims to standardise the way cloud services are offered and measured on the market. It does this by enabling multiple cloud providers to offer comparable services on a single platform with the ability to select the cloud servers' location and jurisdiction.
 
 One of the main challenges in trading utility computing resource like a commodity on a trading platform is the lack of industry standardisation, as discussed in Section \ref{sec-probs}.
 IaaS providers each have different ways of processing workloads and apply different pricing structures. Our ultimate objective would be to be able to trade compute resource in similar fashion as energy or oil, which is clearly equivalent from different suppliers.
