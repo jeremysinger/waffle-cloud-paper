@@ -19,7 +19,7 @@
 \IEEEauthorblockA{School of Computing Science\\
 University of Glasgow\\
 UK\\
-Email: jeremy.singer@glasgow.ac.uk, abyd@adhami.co.uk, colin.perkins@glasgow.ac.uk}
+Email: jeremy.singer@glasgow.ac.uk, abyd@adhami.co.uk, csp@csperkins.org}
 }
 
 \maketitle
@@ -65,9 +65,9 @@ We argue that these and similar problems are preventing the establishment and ef
 
 %%%%%%
 
-\subsection{Coarse Granularity of Services}
+\subsection{Coarse Granularity of Resources}
 
-In terms of IaaS provision, most providers offer predefined, quantized units of computing resource. For example, the lowest specification of an Amazon Web Services (AWS) instance is currently \emph{t2.micro} which features a single virtual CPU and 1 GB RAM. Although the CPU bursting concept allows some rewards for unused CPU cycles, the rewards can only be claimed in terms of subsequent processing, rather than refunds or cheaper pricing.  
+In terms of Infrastructure as a Service (IaaS) provision, most providers offer predefined, quantized units of computing resource. For example, the lowest specification of an Amazon Web Services (AWS) instance is currently \emph{t2.micro} which features a single virtual CPU and 1 GB RAM. Although the CPU bursting concept allows some rewards for unused CPU cycles, the rewards can only be claimed in terms of subsequent processing, rather than refunds or cheaper pricing.  
 
 Another quantized unit is the minimum time period for which instances can be commissioned. AWS customers must rent machines by the hour. Google Compute Engine customers are charged for at least 10 minutes.
 Although there are some more light-weight services, e.g.\ the asynchronous event-based AWS Lambda platform, such innovations are not as flexible and are not yet commonplace.
@@ -78,13 +78,43 @@ Finally, the different instance types hinder fair comparison. Often, it is not p
 
 %%%%%%%
 
+\subsection{Limited Provision and Control of Resources}
+
+In addition to limited granularity of resources, providers generally offer
+only a limited set of resources that can be provisioned and controlled. 
+Compute resources and memory can easily be provisioned, and some platforms
+offer the ability to provision GPU or storage resources, but options to
+provision the network access tend to be severely limited. That is, cloud
+providers tend to virtualise compute, memory, and storage resources, but
+offer no real access to virtualised network services. 
+
+This makes it difficult, for example, to run applications that are
+sensitive to network latency and/or jitter in cloud environments, since
+there is generally no way to request quality of service measures be
+employed. 
+
+Similarly, despite massive investment and research into improving data
+centre network protocols, and provision of software defined networking
+infrastructure to ease management and improve control over resources, 
+it is not generally possible for clients of a cloud computing service
+to access these new features. Protocol changes and virtualised SDN 
+resources are limited to cloud providers, and not made available to
+customers. We need visibility into the software-defined network, to
+allow configuration of network services, and to enable a market for
+network service differentiation and network function virtualisation
+in the cloud. 
+
+%%%%%%%
+
 \subsection{Exclusion of Small Providers}
 
 According to a recent industrial survey \cite{url3} the \emph{big four} providers of compute infrastructure, (Amazon, Microsoft, Google, IBM) control over 50\% of the cloud market. 
 
-In terms of physical requirements, there is a great deal of overhead in building and maintaining a datacenter \cite{greenberg08cost}. Significant costs include electricity. Potentially unexpected costs include compliance with ISO certification standards for cloud security.
+In terms of physical requirements, there is a great deal of overhead in building and maintaining a datacenter \cite{greenberg08cost}. Significant costs include physical infrastructure such as electricity and cooling, but also costs for managing compute, storage, and network resources, and security. Potentially unexpected costs include compliance with ISO certification standards for cloud security.
 
-These significant barriers to entry prevent small providers from participating in the cloud service provision market. Meaningful innovation is occuring in the micro datacenter field, e.g.\ Raspberry Pi clusters \cite{cox14low} and clouds \cite{tso13glasgow,abrahamsson13affordable}.
+These significant barriers to entry prevent small providers from participating in the cloud service provision market. Initiatives such as the Open Compute Project \url{www.opencompute.org} help, by sharing data centre designs and best practices across providers and (somewhat) lowering the barrier to entry, and software platforms such as OpenStack \url{www.openstack.org} and OpenDaylight \url{www.opendaylight.org} ease deployment and manageability, but there is still a massive infrastructure overhead and deployment cost.
+
+Meaningful innovation is occuring in the micro datacenter field, e.g.\ Raspberry Pi clusters \cite{cox14low} and clouds \cite{tso13glasgow,abrahamsson13affordable,valancius:2009:greening}.
 However it is unlikely that such new technology will be adopted by the market as it presently stands.
 
 
