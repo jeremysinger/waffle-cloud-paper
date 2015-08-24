@@ -19,7 +19,7 @@
 \IEEEauthorblockA{School of Computing Science\\
 University of Glasgow\\
 UK\\
-Email: jeremy.singer@glasgow.ac.uk}
+Email: jeremy.singer@glasgow.ac.uk, abyd@adhami.co.uk}
 }
 
 \maketitle
@@ -36,12 +36,12 @@ In this position paper, we briefly outline interesting work that may lead to a s
 \section{Introduction}
 \label{sec-intro}
 
-Big data and ubiquitous computing systems are built upon the foundation of cloud computing, which is now a well-established concept. Industry investment in cloud is worth tens of billions of dollars per annum \footnote{
+Big data and ubiquitous computing systems are built upon the foundation of cloud computing, which is now a well-established concept \cite{armbrust2010view}. Industry investment in cloud is worth tens of billions of dollars per annum \footnote{
 \url{http://www.v3.co.uk/v3-uk/news/2405174/cloud-computing-spending-to-hit-usd32bn-in-2015}} \footnote{\url{https://www.idc.com/getdoc.jsp?containerId=prUS25797415}}. 
-A recent enterprise survey shows that 68\% of companies currently host less than 20\% of their application portfolios in the cloud, so there is still massive scope for increased cloud adoption.
-Current stats. Why is cloud computing so popular? NIST definition. Talk about capex being replaced by opex.
+A recent enterprise survey \cite{rightscale} shows that 68\% of companies currently host less than 20\% of their application portfolios in the cloud, so there is still massive scope for increased cloud adoption.
+%Current stats. Why is cloud computing so popular? NIST definition. %Talk about capex being replaced by opex.
 
-In this paper, we argue that the computing industry has not yet realised the full potential of the cloud computing model for service provision and delivery. In this paper, we outline three problems with cloud computing that prevent its full adoption in a sustainable society driven by big data.
+In this paper, we argue that the computing industry has not yet realised the full potential of the cloud computing model for service provision and delivery. We outline three problems with cloud computing that prevent its full adoption in a sustainable society driven by big data.
 Ideally, a free market for cloud is the desirable scenario. However the problems shown in Section \ref{sec-probs}
 are impediments to a free market.
 We generally focus on infrastructure-as-a-service (IaaS) cloud computing since this is where we have most experience. However we expect that similar arguments will apply to other levels of utility computing provision.
@@ -59,7 +59,7 @@ We argue that these and similar issues are preventing the establishment and effi
 
 \subsection{Coarse Granularity of Services}
 
-In terms of IaaS provision, most providers offer predefined, quantized units of computing resource. For example, the lowest specification of an Amazon Web Services (AWS) instance is currently \emph{t2.micro} which features a single CPU and 1 GB RAM. Although the CPU bursting concept allows some rewards for unused CPU cycles, the rewards can only be claimed in terms of subsequent processing, rather than refunds or cheaper pricing.  
+In terms of IaaS provision, most providers offer predefined, quantized units of computing resource. For example, the lowest specification of an Amazon Web Services (AWS) instance is currently \emph{t2.micro} which features a single virtual CPU and 1 GB RAM. Although the CPU bursting concept allows some rewards for unused CPU cycles, the rewards can only be claimed in terms of subsequent processing, rather than refunds or cheaper pricing.  
 
 Another quantized unit is the minimum time period for which instances can be commissioned. AWS customers must rent machines by the hour. Google Compute Engine customers are charged for at least 10 minutes.
 Although there are some more light-weight services, e.g.\ the asynchronous event-based AWS Lambda platform, such innovations are not as flexible and are not yet commonplace.
@@ -76,7 +76,7 @@ According to a recent industrial survey, the \emph{big four} providers of comput
 
 In terms of physical requirements, there is a great deal of overhead in building and maintaining a datacenter \cite{greenberg08cost}. Significant costs include electricity. Unexpected costs include compliance with ISO certification standards for cloud security.
 
-These significant barriers to entry prevent small providers from participating in the cloud service provision market. Meaningful innovation is occuring in the micro datacenter field, e.g.\ Raspberry Pi cloud and others.
+These significant barriers to entry prevent small providers from participating in the cloud service provision market. Meaningful innovation is occuring in the micro datacenter field, e.g.\ Raspberry Pi clouds \cite{tso13glasgow}.
 However it is unlikely that such new technology will be adopted by the market in general.
 
 
@@ -93,7 +93,7 @@ Grid broker services \footnote{\url{http://www.cloudbus.org/broker/}} for eScien
 Each of the major cloud service providers presents its own custom APIs and functionality for major application-level support. Typical features include key/value storage, database and outgoing email.
 There are few cloud industry standards, so all vendors offer their own, mutually incompatible, APIs.
 This problematic scenario quickly leads to vendor lockin for cloud users. Any kind of software investment built on a commercial IaaS platform will have vendor-specific assumptions and dependences. 
-Ideally, a vendor-neutral cloud facade would address this difficulty. Although some facade style solutions are available, none is widely adopted by customers or supported by all cloud providers.
+Ideally, a vendor-neutral cloud facade \cite{martino15cross} would address this difficulty. Although some facade style solutions are available (e.g.\ Apache libcloud\footnote{\url{https://libcloud.apache.org}} or DeltaCloud \footnote{\url{http://deltacloud.apache.org}}) none is widely adopted by customers or supported by all cloud providers.
 In the same way as operating systems have the concept of POSIX compliance, we need something similar for IaaS providers. This would make it easy to migrate services dynamically from one provider to another, based on fluctuating demand, prices and other higher level non-functional concerns.
 
 One might argue that the lowest common denominator across all IaaS providers, e.g.\ a bare-bones x86 Linux server, might be the common facade. Then cloud customers can build specific services on top of this standard base layer, e.g.\ database, key/value store, etc. Such services could be deployed in Docker containers, which are increasingly supported by major vendors. However, the administration overhead for all these services has a high cost.
