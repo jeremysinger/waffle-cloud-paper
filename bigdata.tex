@@ -68,14 +68,14 @@ We argue that these and similar problems are preventing the establishment and ef
 
 \subsection{Coarse Granularity of Resources}
 
-In terms of Infrastructure as a Service (IaaS) provision, most providers offer predefined, quantized units of computing resource. For example, the lowest specification of an Amazon Web Services (AWS) instance is currently \emph{t2.micro} which features a single virtual CPU and 1 GB RAM. Although the CPU bursting concept allows some rewards for unused CPU cycles, the rewards can only be claimed in terms of subsequent processing, rather than refunds or cheaper pricing.  
+In terms of Infrastructure as a Service (IaaS) provision, most providers offer predefined, quantized units of computing resource. For example, the lowest specification of an Amazon Web Services (AWS) instance is currently \emph{t2.micro} which features a single virtual CPU and 1 GB RAM \cite{amznt2}. Although the CPU bursting concept allows some rewards for unused CPU cycles, the rewards can only be claimed in terms of subsequent processing, rather than refunds or cheaper pricing.  
 
 Another quantized unit is the minimum time period for which instances can be commissioned. AWS customers must rent machines by the hour. Google Compute Engine customers are charged for at least 10 minutes.
 Although there are some more light-weight services, e.g.\ the asynchronous event-based AWS Lambda platform, such innovations are not as flexible and are not yet commonplace.
 
 This quantization of service is inefficient, in terms of market economics. Very often, consumers will pay for more provision than they actually require. Another disadvantage is that any kind of statistical analysis, modeling or forecasting for computing requirements is less straightforward with non-continuous parameters. 
 
-Finally, the different instance types hinder fair comparison. Often, it is not possible to make direct comparisons between different IaaS providers since they are offering products that are not precisely equivalent.
+Finally, the different instance types hinder fair comparison. Often, it is not possible to make direct comparisons between different IaaS providers since they are offering products that are neither precisely equivalent nor directly comparable.
 
 %%%%%%%
 
@@ -133,7 +133,7 @@ Each of the major cloud service providers presents its own custom APIs and funct
 There are few cloud industry standards, so all vendors offer their own, mutually incompatible, APIs.
 This problematic scenario quickly leads to vendor lockin for cloud users. Any kind of software investment built on a commercial IaaS platform will have vendor-specific assumptions and dependences. 
 Ideally, a vendor-neutral cloud facade \cite{martino15cross} would address this difficulty. Although some facade style solutions are available (e.g.\ Apache libcloud \cite{url5} or DeltaCloud \cite{url6}) none is widely adopted by customers or supported by all cloud providers.
-In the same way as operating systems have the concept of POSIX compliance, we need something similar for IaaS providers. This would make it easy to migrate services dynamically from one provider to another, based on fluctuating demand, prices and other higher level non-functional concerns. Initiatives such as the Nuxi CloudABI \url{https://www.bsdcan.org/2015/schedule/track/Security/524.en.html} have potential here, since they provide a reasonably familiar programming interface, cut-down to essential services and augmented by a capability-based security model that is well suited to cloud environments. 
+In the same way as operating systems have the concept of POSIX compliance, we need something similar for IaaS providers. This would make it easy to migrate services dynamically from one provider to another, based on fluctuating demand, prices and other higher level non-functional concerns. Initiatives such as Nuxi CloudABI \cite{nuxi} have potential here, since they provide a reasonably familiar programming interface, cut-down to essential services and augmented by a capability-based security model that is well suited to cloud environments. 
 
 One might argue that the lowest common denominator across all IaaS providers, e.g.\ a bare-bones x86 Linux server, might be the common facade. Then cloud customers can build specific services on top of this standard base layer, e.g.\ database, key/value store, etc. Such services could be deployed in Docker containers, which are increasingly supported by major vendors. However, the administration overhead for all these services has a high cost.
 This means the cloud customer actually \emph{loses} many of the benefits of utility computing in the first place
